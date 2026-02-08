@@ -31,8 +31,8 @@ export default function SaboresPage() {
         <div className="container">
             <section className="section">
                 <Reveal>
-                    <h1 className={styles.heading}>Laboratorio de Sabores</h1>
-                    <p className={styles.subtitle}>Sinfonía Molecular & Artesanía Criogénica</p>
+                    <h1 className={styles.heading}>Nuestros Sabores</h1>
+                    <p className={styles.subtitle}>Artesanía & Tradición en cada Scoop</p>
                 </Reveal>
 
                 {/* Search and Filter UI */}

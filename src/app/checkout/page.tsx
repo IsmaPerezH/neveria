@@ -143,7 +143,7 @@ export default function CheckoutPage() {
                                     <label className={`${styles.optionItem} ${formData.shippingMethod === 'express' ? styles.optionActive : ''}`}>
                                         <input type="radio" name="shippingMethod" value="express" checked={formData.shippingMethod === 'express'} onChange={handleInputChange} />
                                         <div className={styles.optionInfo}>
-                                            <span className={styles.optionName}>Envío Alquímico Express ($20.00)</span>
+                                            <span className={styles.optionName}>Envío Prioritario ($20.00)</span>
                                             <span className={styles.optionDesc}>Entrega en 15-20 minutos (Prioridad alta).</span>
                                         </div>
                                     </label>
@@ -199,7 +199,7 @@ export default function CheckoutPage() {
                                 </div>
                                 <h2 className={styles.successTitle}>¡Pedido Recibido! 🍦</h2>
                                 <p className={styles.successText}>
-                                    Gracias por tu compra, <strong>{formData.name}</strong>. Tus helados están siendo preparados con artesanía criogénica y llegarán pronto a <strong>{formData.address}</strong>.
+                                    Gracias por tu compra, <strong>{formData.name}</strong>. Tus helados están siendo preparados con ingredientes frescos y llegarán pronto a <strong>{formData.address}</strong>.
                                 </p>
                                 <div className={styles.orderNumber}>Número de Pedido: #INV-{Math.floor(Math.random() * 900000) + 100000}</div>
                                 <Link href="/" className="btn-primary" style={{ marginTop: '2.5rem' }}>Volver al Inicio</Link>

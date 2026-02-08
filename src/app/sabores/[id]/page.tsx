@@ -25,7 +25,7 @@ export default function ProductDetailPage() {
                 <Reveal>
                     <h1 className="title-display">Sabor no encontrado</h1>
                     <p style={{ marginTop: '2rem', color: 'var(--color-text-muted)' }}>
-                        Parece que este experimento molecular no existe todavía.
+                        Lo sentimos, este sabor no está disponible por ahora.
                     </p>
                     <Link href="/sabores" className="btn-primary" style={{ marginTop: '2rem' }}>
                         Volver al Menú
@@ -97,7 +97,7 @@ export default function ProductDetailPage() {
                             </div>
                             <div className={styles.featureItem}>
                                 <FlaskConical size={20} color="var(--color-secondary)" />
-                                <span>Artesanía Criogénica</span>
+                                <span>Hecho a Mano</span>
                             </div>
                         </div>
 
@@ -134,7 +134,7 @@ export default function ProductDetailPage() {
                 {/* Nutrition/Details Tabs (Simplified) */}
                 <Reveal style={{ marginTop: '5rem' }}>
                     <div className={styles.detailsBox}>
-                        <h3 className={styles.detailsHeading}>Información Molecular</h3>
+                        <h3 className={styles.detailsHeading}>Características del Helado</h3>
                         <div className={styles.detailsGrid}>
                             <div className={styles.detail}>
                                 <span className={styles.detailLabel}>Calorías</span>
@@ -156,8 +156,8 @@ export default function ProductDetailPage() {
                 {relatedProducts.length > 0 && (
                     <section style={{ marginTop: '8rem' }}>
                         <Reveal>
-                            <h2 className={styles.sectionTitle}>Sugerencias Alquímicas</h2>
-                            <p className={styles.sectionSubtitle}>Basado en tu perfil de sabor favorito</p>
+                            <h2 className={styles.sectionTitle}>Te Recomendamos</h2>
+                            <p className={styles.sectionSubtitle}>Sabores similares que podrían gustarte</p>
                         </Reveal>
 
                         <div className={styles.relatedGrid}>

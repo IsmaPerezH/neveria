@@ -1,34 +1,34 @@
-# Nevería Artesanal - Gourmet & Molecular Experience 🍦✨
+# Nevería Artesanal - Helados Gourmet & Naturales 🍦✨
 
-Bienvenido al repositorio de **Nevería Artesanal**, una plataforma de e-commerce de alta gama diseñada para ofrecer una experiencia gastronómica digital inmersiva. Este proyecto combina una estética futurista "Gourmet Sophistication" con una funcionalidad de comercio electrónico robusta.
+Bienvenido al repositorio de **Nevería Artesanal**, una plataforma de comercio electrónico diseñada para ofrecer una experiencia dulce y profesional. Este proyecto combina un diseño moderno con todas las funcionalidades necesarias para una tienda de helados en línea.
 
 ## 🚀 Características Principales
 
-- **Diseño Premium & Responsivo**: Una interfaz oscura, elegante y moderna que se adapta perfectamente a móviles, tablets y escritorio.
-- **Laboratorio de Sabores**: Catálogo dinámico con sistema de búsqueda en tiempo real y filtros por categorías (Cremosos, Sorbetes, Especiales).
-- **Personalización de Helados**: Herramienta interactiva para armar tu helado ideal paso a paso.
-- **Experiencia de Compra Completa**:
-  - Carrito de compras persistente.
-  - Checkout de 4 pasos (Datos, Envío, Pago, Confirmación).
-  - Páginas de detalle de producto con información nutricional y sugerencias.
-- **Perfil de Usuario & Fidelización**: Sistema de puntos (gamificación), niveles y registro de historial de pedidos.
-- **Contacto Directo**: Mapa integrado, horarios y botón flotante de WhatsApp.
-- **Animaciones Fluidas**: Uso de `IntersectionObserver` para efectos de "Scroll Reveal" y micro-interacciones de lujo.
+- **Diseño Elegante & Responsivo**: Una interfaz moderna que se adapta perfectamente a cualquier dispositivo (móvil, tablet y escritorio).
+- **Catálogo de Sabores**: Menú dinámico con buscador y filtros por categorías (Cremosos, Sorbetes, Especiales).
+- **Personalización de Helados**: Herramienta interactiva para armar tu helado ideal con diferentes toppings y sabores.
+- **Proceso de Compra Completo**:
+  - Carrito de compras funcional.
+  - Pago en 4 pasos (Datos, Envío, Pago, Confirmación).
+  - Páginas de detalle de producto con descripciones y recomendaciones.
+- **Perfil de Usuario**: Historial de pedidos, puntos de lealtad y niveles de cliente frecuente.
+- **Contacto y Soporte**: Página de contacto con mapa integrado, horarios y botón de WhatsApp.
+- **Animaciones Suaves**: Efectos de aparición gradual para una navegación fluida y agradable.
 
 ## 🛠️ Tecnologías Utilizadas
 
 - **Frontend**: [Next.js 14+](https://nextjs.org/) (App Router)
 - **Lenguaje**: [TypeScript](https://www.typescript.org/)
-- **Estilos**: Vanilla CSS Modules (para máxima precisión y rendimiento)
+- **Estilos**: CSS Modules (Diseño a medida)
 - **Iconos**: [Lucide React](https://lucide.dev/)
 - **Gestión de Estado**: React Context API
-- **Fuentes**: Google Fonts (Fredoka & Nunito)
+- **Tipografía**: Google Fonts (Fredoka & Nunito)
 
 ## 📦 Instalación y Uso
 
 1. Clona este repositorio:
    ```bash
-   git clone [URL-DEL-REPOSITORIO]
+   git clone https://github.com/IsmaPerezH/neveria.git
    ```
 2. Instala las dependencias:
    ```bash
@@ -40,12 +40,12 @@ Bienvenido al repositorio de **Nevería Artesanal**, una plataforma de e-commerc
    ```
 4. Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-## 🎨 Concepto de Diseño: "Gourmet Sophistication"
+## 🎨 Concepto Visual
 
-El proyecto utiliza una paleta de colores estratégicamente seleccionada para estimular el apetito:
-- **Frambuesa Profundo**: Para captar la atención y evocar frescura.
-- **Oro Waffle**: Para aportar calidez y recordar los ingredientes artesanales.
-- **Negro Ébano**: Para mantener un estatus premium y exclusivo.
+El proyecto utiliza una paleta de colores cálida y profesional:
+- **Rojo Frambuesa**: Color principal para resaltar botones y elementos clave.
+- **Amarillo Miel**: Para detalles y acentos que evocan dulzura.
+- **Fondo Oscuro Elegante**: Para un aspecto moderno y sofisticado.
 
 ---
-Diseñado con ❤️ por Antigravity para los amantes del helado gourmet.
+Diseñado con ❤️ para ofrecer la mejor experiencia en heladería artesanal.

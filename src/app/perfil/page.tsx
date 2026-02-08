@@ -27,7 +27,7 @@ export default function ProfilePage() {
                         <Image src="/avatar-1.png" width={100} height={100} alt="Avatar login" className={styles.loginAvatar} />
                     </div>
                     <h1>Bienvenue al Club</h1>
-                    <p>Inicia sesión para ver tu historial alquímico y puntos de lealtad.</p>
+                    <p>Inicia sesión para ver tu historial de compras y puntos de lealtad.</p>
                     <button onClick={login} className="btn-primary" style={{ marginTop: '2rem' }}>
                         Simular Inicio de Sesión
                     </button>
@@ -96,7 +96,7 @@ export default function ProfilePage() {
                 <main className={styles.mainContent}>
                     {activeTab === 'orders' && (
                         <Reveal key="orders">
-                            <h1 className={styles.sectionTitle}>Tus Experimentos Pasados</h1>
+                            <h1 className={styles.sectionTitle}>Tus Compras Pasadas</h1>
                             <div className={styles.ordersList}>
                                 {user?.orders.map((order) => (
                                     <div key={order.id} className={styles.orderCard}>

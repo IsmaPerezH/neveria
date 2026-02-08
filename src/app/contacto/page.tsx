@@ -19,7 +19,7 @@ export default function ContactPage() {
             <div className="section">
                 <Reveal>
                     <h1 className={styles.pageTitle}>Conectemos</h1>
-                    <p className={styles.pageSubtitle}>¿Tienes un evento especial o alguna duda molecular? Estamos aquí para ayudarte.</p>
+                    <p className={styles.pageSubtitle}>¿Tienes un evento especial o alguna duda? Estamos aquí para ayudarte.</p>
                 </Reveal>
 
                 <div className={styles.contactGrid}>
@@ -128,7 +128,7 @@ export default function ContactPage() {
                                 <div className={styles.successMessage}>
                                     <CheckCircle2 size={64} color="var(--color-secondary)" />
                                     <h2>¡Mensaje Recibido!</h2>
-                                    <p>Nuestro equipo de alquimistas te responderá en menos de lo que tarda en derretirse un helado al sol.</p>
+                                    <p>Nuestro equipo te responderá lo antes posible para atender tu solicitud.</p>
                                     <button onClick={() => setSubmitted(false)} className={styles.resetBtn}>
                                         Enviar otro mensaje
                                     </button>
