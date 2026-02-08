@@ -1,27 +1,48 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  /* Gourmet Premium Palette - Delicious & Social */
+  --color-primary: #D90429;
+  /* Raspberry / Deep Cherry - Stimulates Appetite */
+  --color-secondary: #FFB627;
+  /* Honey / Waffle Gold - Warmth & Sweetness */
+  --color-tertiary: #FFE8D6;
+  /* Creamy Vanilla */
+  --color-accent: #6D3B47;
+  /* Cocoa / Dark Fruit */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+  /* Backgrounds & Surfaces - Warm Ebony */
+  --color-background: #0F0D0E;
+  /* Deep Cocoa Black */
+  --color-surface: rgba(255, 255, 255, 0.04);
+  --color-surface-hover: rgba(255, 255, 255, 0.08);
+  --color-text-main: #FFFFFF;
+  --color-text-muted: #A89B9D;
+  /* Warm Gray */
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
+  /* Glassmorphism Refined for Warmth */
+  --glass-blur: blur(12px);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Typography */
+  --font-heading: var(--font-fredoka);
+  --font-body: var(--font-nunito);
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 8rem;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 32px;
+  --radius-full: 9999px;
+
+  /* Animations */
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 * {
@@ -30,13 +51,154 @@ body {
   margin: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+html {
+  font-size: 16px;
+  background-color: var(--color-background);
 }
 
-@media (prefers-color-scheme: dark) {
+@media (max-width: 1024px) {
   html {
-    color-scheme: dark;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+body {
+  font-family: var(--font-body), sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Gourmet Ambient Background */
+body::before {
+  content: '';
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  /* Using warm red and honey tones for a cozy premium feel */
+  background: radial-gradient(circle at center, rgba(217, 4, 41, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 182, 39, 0.02) 0%, transparent 40%),
+    radial-gradient(circle at 20% 80%, rgba(109, 59, 71, 0.03) 0%, transparent 40%);
+  z-index: -1;
+  animation: moveBG 40s infinite linear;
+}
+
+@keyframes moveBG {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading), cursive;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+.section {
+  padding: 6rem 0;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 4rem 0;
+  }
+}
+
+.title-display {
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  text-align: center;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .title-display {
+    font-size: 2.5rem;
+  }
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: white;
+  padding: 1.1rem 2.5rem;
+  border-radius: var(--radius-full);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: 0 8px 25px rgba(217, 4, 41, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(217, 4, 41, 0.4);
+  background: #ef233c;
+}
+
+@media (max-width: 480px) {
+  .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Reveal Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.reveal_visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal_slow {
+  transition-delay: 0.15s;
+}
+
+.reveal_slower {
+  transition-delay: 0.3s;
+}
+
+.hide-mobile {
+  @media (max-width: 768px) {
+    display: none !important;
   }
 }

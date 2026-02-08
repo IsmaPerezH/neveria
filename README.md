@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nevería Artesanal - Gourmet & Molecular Experience 🍦✨
 
-## Getting Started
+Bienvenido al repositorio de **Nevería Artesanal**, una plataforma de e-commerce de alta gama diseñada para ofrecer una experiencia gastronómica digital inmersiva. Este proyecto combina una estética futurista "Gourmet Sophistication" con una funcionalidad de comercio electrónico robusta.
 
-First, run the development server:
+## 🚀 Características Principales
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Diseño Premium & Responsivo**: Una interfaz oscura, elegante y moderna que se adapta perfectamente a móviles, tablets y escritorio.
+- **Laboratorio de Sabores**: Catálogo dinámico con sistema de búsqueda en tiempo real y filtros por categorías (Cremosos, Sorbetes, Especiales).
+- **Personalización de Helados**: Herramienta interactiva para armar tu helado ideal paso a paso.
+- **Experiencia de Compra Completa**:
+  - Carrito de compras persistente.
+  - Checkout de 4 pasos (Datos, Envío, Pago, Confirmación).
+  - Páginas de detalle de producto con información nutricional y sugerencias.
+- **Perfil de Usuario & Fidelización**: Sistema de puntos (gamificación), niveles y registro de historial de pedidos.
+- **Contacto Directo**: Mapa integrado, horarios y botón flotante de WhatsApp.
+- **Animaciones Fluidas**: Uso de `IntersectionObserver` para efectos de "Scroll Reveal" y micro-interacciones de lujo.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tecnologías Utilizadas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Frontend**: [Next.js 14+](https://nextjs.org/) (App Router)
+- **Lenguaje**: [TypeScript](https://www.typescript.org/)
+- **Estilos**: Vanilla CSS Modules (para máxima precisión y rendimiento)
+- **Iconos**: [Lucide React](https://lucide.dev/)
+- **Gestión de Estado**: React Context API
+- **Fuentes**: Google Fonts (Fredoka & Nunito)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📦 Instalación y Uso
 
-## Learn More
+1. Clona este repositorio:
+   ```bash
+   git clone [URL-DEL-REPOSITORIO]
+   ```
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+3. Inicia el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+4. Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-To learn more about Next.js, take a look at the following resources:
+## 🎨 Concepto de Diseño: "Gourmet Sophistication"
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+El proyecto utiliza una paleta de colores estratégicamente seleccionada para estimular el apetito:
+- **Frambuesa Profundo**: Para captar la atención y evocar frescura.
+- **Oro Waffle**: Para aportar calidez y recordar los ingredientes artesanales.
+- **Negro Ébano**: Para mantener un estatus premium y exclusivo.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+Diseñado con ❤️ por Antigravity para los amantes del helado gourmet.

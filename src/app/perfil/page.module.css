@@ -1,0 +1,303 @@
+.loginCard {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 4rem;
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(20px);
+}
+
+.loginIcon {
+    margin-bottom: 2rem;
+}
+
+.loginAvatar {
+    border-radius: 50%;
+    filter: grayscale(1);
+    opacity: 0.5;
+}
+
+.profileGrid {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 4rem;
+    padding: 4rem 0;
+}
+
+@media (max-width: 900px) {
+    .profileGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Sidebar */
+.userCard {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.avatarWrapper {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.05);
+}
+
+.badge {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--color-secondary);
+    color: #000;
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 0.3rem 0.8rem;
+    border-radius: var(--radius-full);
+    text-transform: uppercase;
+}
+
+.userName {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 0.3rem;
+}
+
+.userEmail {
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 2rem;
+}
+
+.loyaltyBox {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.loyaltyHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.pointsRow {
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.pointsValue {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.pointsLabel {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+}
+
+.progressBar {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    margin-bottom: 0.8rem;
+    overflow: hidden;
+}
+
+.progressFill {
+    height: 100%;
+    background: var(--color-secondary);
+}
+
+.nextTierText {
+    font-size: 0.7rem;
+    color: var(--color-text-muted);
+}
+
+.sideNav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.navBtn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    color: var(--color-text-muted);
+    transition: all 0.3s ease;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.navBtn:hover {
+    background: rgba(255, 255, 255, 0.03);
+    color: #fff;
+}
+
+.navActive {
+    background: rgba(217, 4, 41, 0.1);
+    color: var(--color-primary);
+}
+
+.logoutBtn {
+    margin-top: 1rem;
+    color: #ff4d4d;
+}
+
+/* Main Content */
+.sectionTitle {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.ordersList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.orderCard {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.orderHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.orderId {
+    display: block;
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+}
+
+.orderDate {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+.statusBadge {
+    padding: 0.4rem 1rem;
+    border-radius: var(--radius-full);
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.entregado {
+    background: rgba(0, 255, 127, 0.1);
+    color: #00ff7f;
+}
+
+.encamino {
+    background: rgba(255, 182, 39, 0.1);
+    color: var(--color-secondary);
+}
+
+.orderContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 1.5rem;
+}
+
+.orderItems {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+}
+
+.orderTotal strong {
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+}
+
+.orderAction {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 0.9rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.favsPlaceholder {
+    text-align: center;
+    padding: 5rem 0;
+}
+
+.settingsForm {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.inputGroup label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+}
+
+.inputGroup input[type="text"] {
+    padding: 1rem 1.5rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-md);
+    color: #fff;
+}
+
+.checkboxGroup {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.checkboxGroup label {
+    text-transform: none;
+    font-size: 0.95rem;
+}

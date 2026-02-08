@@ -1,0 +1,330 @@
+.pageWrapper {
+    padding: 4rem 0;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.pageTitle {
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+/* Stepper */
+.stepper {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 5rem;
+    padding: 0 1rem;
+}
+
+.progressLine {
+    position: absolute;
+    top: 20px;
+    left: 5%;
+    right: 5%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+}
+
+.progressFill {
+    height: 100%;
+    background: var(--color-primary);
+    transition: width 0.5s ease;
+}
+
+.stepItem {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.stepIcon {
+    width: 40px;
+    height: 40px;
+    background: var(--color-background);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: var(--color-text-muted);
+    transition: all 0.3s ease;
+}
+
+.stepLabel {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    letter-spacing: 1px;
+}
+
+.stepActive .stepIcon {
+    border-color: var(--color-primary);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(217, 4, 41, 0.3);
+}
+
+.stepActive .stepLabel {
+    color: #fff;
+}
+
+.stepDone .stepIcon {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #fff;
+}
+
+/* Main Grid */
+.mainGrid {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 3rem;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .mainGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.formContent {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-lg);
+    padding: 3rem;
+    backdrop-filter: blur(20px);
+}
+
+@media (max-width: 600px) {
+    .formContent {
+        padding: 1.5rem;
+    }
+}
+
+.stepTitle {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Inputs */
+.inputGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+@media (max-width: 600px) {
+    .inputGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.inputGroup label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+}
+
+.inputGroup input {
+    padding: 1rem 1.5rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-md);
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.inputGroup input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Options */
+.optionList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.optionItem {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.optionActive {
+    border-color: var(--color-primary);
+    background: rgba(217, 4, 41, 0.05);
+}
+
+.optionInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.optionName {
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.optionDesc {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+/* Navigation */
+.navigation {
+    margin-top: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.backButton {
+    background: transparent;
+    color: var(--color-text-muted);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.backButton:hover {
+    color: #fff;
+}
+
+/* Sidebar Summary */
+.summaryBox {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    position: sticky;
+    top: 120px;
+}
+
+.summaryTitle {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.summaryList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.summaryItem {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+}
+
+.summaryItemInfo {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.itemQty {
+    font-weight: 800;
+    color: var(--color-primary);
+}
+
+.itemPrice {
+    font-weight: 700;
+}
+
+.totals {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.totalRow {
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+}
+
+.grandTotal {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 900;
+    margin-top: 0.5rem;
+}
+
+/* Success State */
+.successState {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.checkCircle {
+    width: 100px;
+    height: 100px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2.5rem;
+    color: #fff;
+    box-shadow: 0 15px 40px rgba(217, 4, 41, 0.4);
+}
+
+.successTitle {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.successText {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 500px;
+    margin: 0 auto 2.5rem;
+}
+
+.orderNumber {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.8rem 2rem;
+    border-radius: var(--radius-md);
+    font-family: monospace;
+    font-size: 1.2rem;
+    color: var(--color-secondary);
+}
