@@ -4,7 +4,7 @@
     margin-bottom: 1rem;
     font-weight: 900;
     letter-spacing: -3px;
-    color: #fff;
+    color: var(--color-text-main);
     text-transform: uppercase;
 }
 
@@ -50,10 +50,10 @@
 .searchInput {
     width: 100%;
     padding: 1.2rem 1.5rem 1.2rem 3.5rem;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: var(--color-surface);
+    border: var(--glass-border);
     border-radius: var(--radius-full);
-    color: #fff;
+    color: var(--color-text-main);
     font-size: 1.1rem;
     transition: all 0.3s ease;
 }
@@ -61,7 +61,7 @@
 .searchInput:focus {
     outline: none;
     border-color: var(--color-primary);
-    background: rgba(255, 255, 255, 0.06);
+    background: var(--color-surface-hover);
     box-shadow: 0 0 30px rgba(217, 4, 41, 0.1);
 }
 
@@ -80,10 +80,10 @@
 .categoryTabs {
     display: flex;
     gap: 0.5rem;
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--color-surface);
     padding: 0.5rem;
     border-radius: var(--radius-full);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: var(--glass-border);
 }
 
 @media (max-width: 600px) {
@@ -106,6 +106,62 @@
     background: var(--color-primary);
     color: #fff;
     box-shadow: 0 5px 15px rgba(217, 4, 41, 0.2);
+}
+
+.gridContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+/* Shelf Styling */
+.shelfSection {
+    margin-bottom: 2rem;
+}
+
+.shelfHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: var(--glass-border);
+}
+
+.shelfTitle {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--color-text-main);
+}
+
+.itemCount {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.sliderContainer {
+    width: 100%;
+    overflow-x: auto;
+    padding: 1rem 0 3rem 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.sliderContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.sliderTrack {
+    display: flex;
+    gap: 2rem;
+    width: max-content;
+}
+
+.sliderItem {
+    width: 320px;
+    flex-shrink: 0;
 }
 
 .grid {

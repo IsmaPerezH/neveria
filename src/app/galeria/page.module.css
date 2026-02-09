@@ -1,0 +1,201 @@
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.header svg {
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--color-text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Filtros */
+.filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.filterBtn {
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--radius-full);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--color-text-muted);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.filterBtn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.filterActive {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #fff;
+}
+
+/* Grid Mosaico */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    grid-auto-flow: dense;
+}
+
+.imageCard {
+    position: relative;
+    height: 280px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.imageCard:hover {
+    transform: scale(1.02);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+.imageCard.featured {
+    grid-column: span 2;
+    height: 400px;
+}
+
+@media (max-width: 768px) {
+    .imageCard.featured {
+        grid-column: span 1;
+        height: 280px;
+    }
+}
+
+.image {
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.imageCard:hover .image {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 50%);
+    display: flex;
+    align-items: flex-end;
+    padding: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.imageCard:hover .overlay {
+    opacity: 1;
+}
+
+.imageAlt {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.closeBtn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-full);
+    padding: 0.8rem;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.closeBtn:hover {
+    background: var(--color-primary);
+}
+
+.navBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-full);
+    padding: 1rem;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.navBtn:hover {
+    background: var(--color-secondary);
+    color: #000;
+}
+
+.prevBtn {
+    left: 2rem;
+}
+
+.nextBtn {
+    right: 2rem;
+}
+
+.lightboxContent {
+    position: relative;
+    width: 80vw;
+    height: 70vh;
+    max-width: 1200px;
+}
+
+.lightboxImage {
+    object-fit: contain;
+}
+
+.lightboxCaption {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem 2rem;
+    border-radius: var(--radius-full);
+    color: #fff;
+    font-weight: 600;
+}

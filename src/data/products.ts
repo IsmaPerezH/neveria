@@ -4,7 +4,7 @@ export interface Product {
     description: string;
     price: number;
     image: string;
-    category: 'helado' | 'sorbete' | 'especial';
+    category: 'helado' | 'sorbete' | 'especial' | 'agua' | 'paleta';
     isPopular?: boolean;
 }
 
@@ -68,5 +68,39 @@ export const products: Product[] = [
         image: '/special-ice-cream.jpg',
         category: 'especial',
         isPopular: true,
+    },
+    {
+        id: '8',
+        name: 'Agua de Horchata Real',
+        description: 'Receta tradicional con arroz, canela de Ceilán y un toque cremoso.',
+        price: 35,
+        image: '/agua.jpg',
+        category: 'agua',
+        isPopular: true,
+    },
+    {
+        id: '9',
+        name: 'Agua de Jamaica Especial',
+        description: 'Infusión floral intensa de flor de jamaica premium con un toque de lima.',
+        price: 35,
+        image: '/agua.jpg',
+        category: 'agua',
+    },
+    {
+        id: '10',
+        name: 'Paleta de Fresa Natural',
+        description: 'Trozo de fresa real en cada mordida, base de agua mineral.',
+        price: 30,
+        image: '/paleta.jpg',
+        category: 'paleta',
+        isPopular: true,
+    },
+    {
+        id: '11',
+        name: 'Paleta de Chocolate con Nuez',
+        description: 'Chocolate artesanal cremoso cubierto con nuez de Castilla tostada.',
+        price: 38,
+        image: '/paleta.jpg',
+        category: 'paleta',
     }
 ];

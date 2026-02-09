@@ -71,12 +71,6 @@
   margin-right: auto;
 }
 
-@media (max-width: 768px) {
-  .heroSubtitle {
-    font-size: 1rem;
-  }
-}
-
 .ctaButton {
   background: #fff;
   color: #000;
@@ -86,18 +80,58 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
-/* Home Section Overrides */
-.featuredGrid {
+/* Promo Layout */
+.promoGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 2.5rem;
+  margin-top: 2rem;
 }
 
-@media (max-width: 480px) {
-  .featuredGrid {
-    gap: 1.5rem;
+@media (max-width: 900px) {
+  .promoGrid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Tabs */
+.tabContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.tabBtn {
+  background: var(--color-surface);
+  border: var(--glass-border);
+  color: var(--color-text-muted);
+  padding: 0.8rem 2rem;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.tabBtn:hover {
+  background: var(--color-surface-hover);
+  color: var(--color-text-main);
+}
+
+.activeTab {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+  box-shadow: 0 10px 20px rgba(217, 4, 41, 0.2);
+}
+
+/* Product Row */
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
 }

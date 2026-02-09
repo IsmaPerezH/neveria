@@ -4,11 +4,13 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import styles from './Header.module.css';
 import { useCart } from '@/context/CartContext';
-import { ShoppingCart, Menu, X, IceCream, User } from 'lucide-react';
+import { ShoppingCart, Menu, X, IceCream, User, Sun, Moon } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext';
+import { useTheme } from '@/context/ThemeContext';
 
 export default function Header() {
     const { totalItems } = useCart();
+    const { theme, toggleTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -49,19 +51,25 @@ export default function Header() {
                 </Link>
 
                 <div className={styles.authWrapper}>
-                    <Link href="/perfil" className={styles.profileLink} onClick={closeMenu}>
-                        <User size={20} />
-                        <span className="hide-mobile">Perfil</span>
+                    <Link href="/perfil" className={styles.profileLink} onClick={closeMenu} title="Perfil">
+                        <User size={22} />
                     </Link>
                 </div>
 
-                <Link href="/carrito" className={styles.cartButton} onClick={closeMenu}>
-                    <ShoppingCart size={20} />
-                    <span>Carrito</span>
+                <Link href="/carrito" className={styles.cartButton} onClick={closeMenu} title="Carrito">
+                    <ShoppingCart size={22} />
                     {mounted && totalItems > 0 && (
                         <span className={styles.cartCount}>{totalItems}</span>
                     )}
                 </Link>
+
+                <button
+                    className={styles.themeToggle}
+                    onClick={toggleTheme}
+                    aria-label="Cambiar tema"
+                >
+                    {mounted && (theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />)}
+                </button>
             </nav>
         </header>
     );

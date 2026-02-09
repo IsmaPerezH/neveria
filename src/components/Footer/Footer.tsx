@@ -30,6 +30,7 @@ export default function Footer() {
                     <ul className={styles.ul}>
                         <li className={styles.li}><Link href="/" className={styles.link}>Inicio</Link></li>
                         <li className={styles.li}><Link href="/sabores" className={styles.link}>Sabores</Link></li>
+                        <li className={styles.li}><Link href="/galeria" className={styles.link}>Galería</Link></li>
                         <li className={styles.li}><Link href="/contacto" className={styles.link}>Contacto</Link></li>
                         <li className={styles.li}><Link href="/carrito" className={styles.link}>Carrito</Link></li>
                     </ul>

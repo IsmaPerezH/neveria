@@ -5,11 +5,11 @@ import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard/ProductCard';
 import styles from './page.module.css';
 import Reveal from '@/components/Reveal';
-import { Search, Filter } from 'lucide-react';
+import { Search, Filter, ChevronRight } from 'lucide-react';
 
 export default function SaboresPage() {
     const [searchTerm, setSearchTerm] = useState('');
-    const [category, setCategory] = useState<'all' | 'helado' | 'sorbete' | 'especial'>('all');
+    const [category, setCategory] = useState<'all' | 'helado' | 'sorbete' | 'especial' | 'agua' | 'paleta'>('all');
 
     const filteredProducts = useMemo(() => {
         return products.filter(p => {
@@ -24,6 +24,8 @@ export default function SaboresPage() {
         { id: 'all', label: 'Todos' },
         { id: 'helado', label: 'Cremosos' },
         { id: 'sorbete', label: 'Sorbete (Agua)' },
+        { id: 'agua', label: 'Aguas Frescas' },
+        { id: 'paleta', label: 'Paletas de Hielo' },
         { id: 'especial', label: 'Especiales' },
     ];
 
@@ -65,12 +67,42 @@ export default function SaboresPage() {
                 </Reveal>
 
                 {filteredProducts.length > 0 ? (
-                    <div className={styles.grid}>
-                        {filteredProducts.map((product, index) => (
-                            <Reveal key={product.id} delay={index % 3 === 0 ? 'normal' : index % 3 === 1 ? 'slow' : 'slower'}>
-                                <ProductCard product={product} />
-                            </Reveal>
-                        ))}
+                    <div className={styles.gridContainer}>
+                        {category === 'all' && !searchTerm ? (
+                            categories.filter(c => c.id !== 'all').map(cat => {
+                                const catProducts = filteredProducts.filter(p => p.category === cat.id);
+                                if (catProducts.length === 0) return null;
+                                return (
+                                    <div key={cat.id} className={styles.shelfSection}>
+                                        <Reveal>
+                                            <div className={styles.shelfHeader}>
+                                                <h2 className={styles.shelfTitle}>{cat.label}</h2>
+                                                <span className={styles.itemCount}>{catProducts.length} sabores</span>
+                                            </div>
+                                        </Reveal>
+                                        <div className={styles.sliderContainer}>
+                                            <div className={styles.sliderTrack}>
+                                                {catProducts.map((product, index) => (
+                                                    <div key={product.id} className={styles.sliderItem}>
+                                                        <Reveal delay={index % 3 === 0 ? 'normal' : index % 3 === 1 ? 'slow' : 'slower'}>
+                                                            <ProductCard product={product} />
+                                                        </Reveal>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                );
+                            })
+                        ) : (
+                            <div className={styles.grid}>
+                                {filteredProducts.map((product, index) => (
+                                    <Reveal key={product.id} delay={index % 3 === 0 ? 'normal' : index % 3 === 1 ? 'slow' : 'slower'}>
+                                        <ProductCard product={product} />
+                                    </Reveal>
+                                ))}
+                            </div>
+                        )}
                     </div>
                 ) : (
                     <Reveal className={styles.noResults}>

@@ -1,27 +1,9 @@
 :root {
-  /* Gourmet Premium Palette - Delicious & Social */
+  /* Common Brand Colors */
   --color-primary: #D90429;
-  /* Raspberry / Deep Cherry - Stimulates Appetite */
   --color-secondary: #FFB627;
-  /* Honey / Waffle Gold - Warmth & Sweetness */
   --color-tertiary: #FFE8D6;
-  /* Creamy Vanilla */
   --color-accent: #6D3B47;
-  /* Cocoa / Dark Fruit */
-
-  /* Backgrounds & Surfaces - Warm Ebony */
-  --color-background: #0F0D0E;
-  /* Deep Cocoa Black */
-  --color-surface: rgba(255, 255, 255, 0.04);
-  --color-surface-hover: rgba(255, 255, 255, 0.08);
-  --color-text-main: #FFFFFF;
-  --color-text-muted: #A89B9D;
-  /* Warm Gray */
-
-  /* Glassmorphism Refined for Warmth */
-  --glass-blur: blur(12px);
-  --glass-border: 1px solid rgba(255, 255, 255, 0.08);
-  --glass-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 
   /* Typography */
   --font-heading: var(--font-fredoka);
@@ -43,6 +25,26 @@
   /* Animations */
   --transition-fast: 0.2s ease;
   --transition-medium: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+
+  /* Default Dark Mode Variables */
+  --color-background: #0F0D0E;
+  --color-surface: rgba(255, 255, 255, 0.04);
+  --color-surface-hover: rgba(255, 255, 255, 0.08);
+  --color-text-main: #FFFFFF;
+  --color-text-muted: #A89B9D;
+  --glass-blur: blur(12px);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme='light'] {
+  --color-background: #FDFCFB;
+  --color-surface: rgba(0, 0, 0, 0.03);
+  --color-surface-hover: rgba(0, 0, 0, 0.06);
+  --color-text-main: #1A1819;
+  --color-text-muted: #6B5E60;
+  --glass-border: 1px solid rgba(0, 0, 0, 0.06);
+  --glass-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
 }
 
 * {
@@ -139,7 +141,7 @@ h4 {
   text-transform: uppercase;
   letter-spacing: -1px;
   text-align: center;
-  color: #fff;
+  color: var(--color-text-main);
 }
 
 @media (max-width: 768px) {

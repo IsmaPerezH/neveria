@@ -1,0 +1,142 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.summary {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.avgRating {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.avgNumber {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--color-secondary);
+}
+
+.avgStars {
+    display: flex;
+    gap: 0.2rem;
+}
+
+.totalReviews {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+}
+
+/* Reviews List */
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.reviewCard {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.reviewCard:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.reviewHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.avatar {
+    border-radius: var(--radius-full);
+    object-fit: cover;
+}
+
+.avatarPlaceholder {
+    width: 45px;
+    height: 45px;
+    border-radius: var(--radius-full);
+    background: var(--color-primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.userName {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.date {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    margin-top: 0.2rem;
+}
+
+.reviewStars {
+    display: flex;
+    gap: 0.15rem;
+}
+
+.comment {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-text);
+}
+
+.reviewImage {
+    margin-top: 1rem;
+    display: flex;
+    align-items: flex-end;
+    gap: 0.8rem;
+}
+
+.reviewPhoto {
+    border-radius: var(--radius-md);
+    object-fit: cover;
+}
+
+.galleryBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    background: rgba(255, 182, 39, 0.15);
+    color: var(--color-secondary);
+    padding: 0.3rem 0.8rem;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* Empty State */
+.emptyState {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    color: var(--color-text-muted);
+}

@@ -7,9 +7,11 @@ import { products } from '@/data/products';
 import { useCart } from '@/context/CartContext';
 import styles from './page.module.css';
 import Reveal from '@/components/Reveal';
-import { ArrowLeft, ShoppingCart, Plus, Minus, Star, ShieldCheck, Leaf, FlaskConical } from 'lucide-react';
+import { ArrowLeft, ShoppingCart, Plus, Minus, Star, ShieldCheck, Leaf, FlaskConical, MessageSquare } from 'lucide-react';
 import { useState, useMemo } from 'react';
 import ProductCard from '@/components/ProductCard/ProductCard';
+import ReviewList from '@/components/Reviews/ReviewList';
+import ReviewForm from '@/components/Reviews/ReviewForm';
 
 export default function ProductDetailPage() {
     const { id } = useParams();
@@ -169,6 +171,25 @@ export default function ProductDetailPage() {
                         </div>
                     </section>
                 )}
+
+                {/* Reviews Section */}
+                <section style={{ marginTop: '8rem' }}>
+                    <Reveal>
+                        <div className={styles.reviewsHeader}>
+                            <MessageSquare size={32} color="var(--color-secondary)" />
+                            <h2 className={styles.sectionTitle}>Opiniones de Clientes</h2>
+                        </div>
+                    </Reveal>
+
+                    <div className={styles.reviewsGrid}>
+                        <Reveal delay="normal">
+                            <ReviewList productId={id as string} />
+                        </Reveal>
+                        <Reveal delay="slow">
+                            <ReviewForm productId={id as string} />
+                        </Reveal>
+                    </div>
+                </section>
             </div>
         </div>
     );
